@@ -4,8 +4,9 @@ PHP client library for the [inContact API](https://developer.incontact.com/api/)
 
 # Installation
 
-* Install this package, probably using [Composer](https://getcomposer.org/).
-* Require the incontact class ([autoloading](https://getcomposer.org/doc/01-basic-usage.md#autoloading) is a good way to do this)
+[Composer](https://getcomposer.org/) is the recommended way to install and use this library.
+
+`composer require antsar/incontact`
 
 # Usage
 
@@ -42,3 +43,7 @@ $response = $inContact->post('/queuecallback', ['phoneNumber' => '8005550100']);
 ```
 
 See the [inContact API documentation](https://developer.incontact.com/API) for available API methods.
+
+# Status
+
+This library is very rudimentary, and could be improved. Contributions (issues or pull requests) are welcome and appreciated.
