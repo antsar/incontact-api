@@ -1,4 +1,5 @@
 <?php
+namespace antsar\InContact;
 
 class InContact {
 
