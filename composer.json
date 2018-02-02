@@ -2,7 +2,7 @@
     "name": "antsar/incontact",
     "description": "Client class for the inContact API",
     "license": "MIT",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "authors": [
         {
             "name": "Anton Sarukhanov",

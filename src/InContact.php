@@ -141,7 +141,7 @@ class InContact
 
         // Perform the API request for authentication.
         $response = file_get_contents(
-            $this->authentication-url,
+            $this::AUTH_URL,
             false,
             $request_context
         );
@@ -172,7 +172,7 @@ class InContact
     {
 
         // If token is missing or expired, get a new one.
-        if (!$this->api_token || $this->api_token_expires <= time()) {
+        if (!isset($this->api_token) || $this->api_token_expires <= time()) {
             $this->auth();
         }
 
@@ -217,7 +217,7 @@ class InContact
      */
     public function get($api_url)
     {
-        return $this->request($api, 'GET');
+        return $this->request($api_url, 'GET');
     }
 
     /**
@@ -232,7 +232,7 @@ class InContact
      */
     public function post($api_url, $data)
     {
-        return $this->request($api, 'POST', $data);
+        return $this->request($api_url, 'POST', $data);
     }
 
 }
