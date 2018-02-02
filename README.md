@@ -4,36 +4,24 @@ PHP client library for the [inContact API](https://developer.incontact.com/api/)
 
 # Installation
 
-[Composer](https://getcomposer.org/) is the recommended way to install and use this library.
+[Composer](https://getcomposer.org/) is the recommended way to install this library.
 
 `composer require antsar/incontact`
 
 # Usage
 
 ```php
+// Autoload the inContact class.
 require __DIR__ . '/vendor/autoload.php';
 
-$incontact_options = array(
-    // Authentication URL
-    'authentication-url' => 'https://api.incontact.com/InContactAuthorizationServer/Token',
-
-    // Application Name as registered for the inContact API
-    'application-name' => '',
-
-    // Vendor Name for the inContact API Application
-    'vendor-name' => '',
-
-    // Business Unit number for the inContact API Application
-    'business-unit' => '',
-
-    // inContact User Name
-    'username' => '',
-
-    // inContact User Password
-    'password' => ''
+// Create an API client instance.
+$inContact = new \antsar\incontact\InContact(
+    'exampleApp',       // Application Name as registered with inContact
+    'exampleCompany',   // Vendor Name as registered with inContact
+    '012345',           // Business Unit number as registered with inContact
+    'exampleUser',      // inContact User Name
+    'hunter2'           // inContact User Password
 );
-
-$inContact = new \antsar\incontact\InContact($incontact_options);
 
 // Get status for all agents
 $agents = $inContact->get('/agents/states');
@@ -42,8 +30,20 @@ $agents = $inContact->get('/agents/states');
 $response = $inContact->post('/queuecallback', ['phoneNumber' => '8005550100']);
 ```
 
-See the [inContact API documentation](https://developer.incontact.com/API) for available API methods.
+For more details, please see:
+
+* [InContact class documentation](doc/) - API documentation for the `\antsar\InContact\InContact` class.
+* [inContact API documentation](https://developer.incontact.com/API) - list of available API methods
+
 
 # Status
 
 This library is very rudimentary, and could be improved. Contributions (issues or pull requests) are welcome and appreciated.
+
+# Changes
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+# Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
