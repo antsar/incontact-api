@@ -2,18 +2,17 @@
     "name": "antsar/incontact",
     "description": "Client class for the inContact API",
     "license": "MIT",
-    "version": "0.2",
+    "version": "0.2.1",
     "authors": [
         {
             "name": "Anton Sarukhanov",
             "email": "code@ant.sr"
         }
     ],
-    "require": {
-        "cvuorinen/phpdoc-markdown-public": "^0.2.0"
-    },
+    "require": {},
     "require-dev": {
         "phpdocumentor/phpdocumentor": "^2.9",
+        "cvuorinen/phpdoc-markdown-public": "^0.2.0",
         "squizlabs/php_codesniffer": "^3.2"
     },
     "autoload": {
